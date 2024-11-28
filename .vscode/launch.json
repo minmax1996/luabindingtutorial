@@ -25,13 +25,16 @@
             "type": "go",
             "request": "launch",
             "mode": "debug",
+            "env": {
+                "CGO_ENABLED": "0"
+            },
             "args": [
                 "-algorithm",
                 "double_md5_sorted",
                 "-input",
                 "https://example.com/some/link?q1=1&q2=2&g=3"
             ],
-            "program": "${workspaceFolder}/hasher/main.go"
+            "program": "${workspaceFolder}/hasher"
         }
     ]
 }
